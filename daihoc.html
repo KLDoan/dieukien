@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Toan</p>
+    <input type="text" id="math" placeholder="nhap diem mon toan">
+    <br>
+    <p>Van</p>
+    <input type="text" id="literature" placeholder="nhap diem mon van">
+    <br>
+    <p>Anh</p>
+    <input type="text" id="eng" placeholder="nhap diem mon anh">
+    <br>
+    <h1>Khu vuc</h1>
+    <select name="" id="area" onclick="submit_result()">
+        <option value="kv1" id="">kv1</option>
+        <option value="kv2" id="">kv2</option>
+        <option value="kv2-nt" id="">kv2-nt</option>
+        <option value="kv3" id="">kv3</option>
+    </select>
+    <br>
+    <h1></h1>
+    <button type="submit">Kiem tra</button>
+    <script>
+        let Math = document.getElementById("math")
+        let Literature = document.getElementById("literature")
+        let Eng = document.getElementById("eng")
+        let math = parseInt(Math)
+        let literature = parseInt(Literature)
+        let eng = parseInt(Eng)
+        let kv = ""
+        switch (area) {
+            case 1:
+                kv = 0.75
+                break;
+            case 2:
+                kv = 0.25
+                break;
+            case 3:
+                kv = 0.5
+                break;
+            case 4:
+                kv = 0
+                break;
+        }
+        function submit_result() {
+            let result = math + literature + eng + kv
+            alert("diem cua ban = " + result)
+        }
+    </script>
+</body>
+
+</html>

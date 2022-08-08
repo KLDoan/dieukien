@@ -1,0 +1,45 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let Weight = prompt("hay nhap chi so can nang cua ban")
+        let Height = prompt("hay nhap chi sp chieu cao cua ban")
+        let weight = parseInt(Weight);
+        let height = parseInt(Height);
+        let BMI = weight / (height * height)
+        if (BMI < 16) {
+            alert("gầy cấp độ III"+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 17) {
+            alert("gầy cấp độ II"+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 18.5) {
+            alert('ầy cấp độ I'+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 25) {
+            alert('bình thường'+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 30) {
+            alert('thừa cân'+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 35) {
+            alert('gbéo phì cấp độ I'+ ", BMI cua ban la " + BMI );
+        }
+        else if (BMI < 40) {
+            alert('béo phì cấp độ II'+ ", BMI cua ban la " + BMI );
+        }
+        else {
+            alert('béo phì cấp độ III'+ ", BMI cua ban la " + BMI );
+        }
+
+    </script>
+</body>
+
+</html>

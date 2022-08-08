@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user_input = prompt("nhap vao day nguoi dung")
+        if (user_input == "Employee") {
+            document.write("Hello")
+        } else if (user_input == "Director") {
+            document.write("Greetings")
+        }
+        else if (user_input == null) {// truong hop nay nen bam huy
+            document.write(null)
+        }
+        else {
+            document.write("No login") // truong hop nay neu nhu khong nhap ten nhung van gui thi duoc tinh la No login
+        }
+        
+
+    </script>
+</body>
+
+</html>
