@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Giá hoa quả</h1>
+    <form action="">
+        <input type="search" placeholder="Bạn muốn xem giá quả gì" id="fruit">
+        <button id="check" onclick="fruit_prices()">Check price</button>
+    </form>
+    <h2>Các Loại Quả </h2>
+    <p id="results"></p>
+    <!-- js -->
+    <script>
+        function fruit_prices() {
+            let price = document.getElementById("fruit").value
+            let res = document.getElementById("results")
+            switch (price) {
+                case "Ổi":
+                    alert("20000 VNĐ/kg");
+                    break;
+                case "Dưa Hấu":
+                    alert("20000 VNĐ/kg");
+                    break;
+                case "Táo":
+                    alert("30000 VNĐ/kg");
+                    break;
+                case "Xoài":
+                    alert("30000 VNĐ/kg");
+                    break;
+                case "Cam":
+                    alert("40000 VNĐ/kg");
+                    break;
+                case "Chôm Chôm":
+                    alert("40000 VNĐ/kg");
+                    break;
+                case "Măng Cụt":
+                    alert("50000 VNĐ/kg");
+                    break;
+                default:
+                    alert("Chúng tôi không có giá cho loại quả này")
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
