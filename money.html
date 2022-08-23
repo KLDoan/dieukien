@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h3>Amount</h3>
+                <input type="text" id="money_in">
+            </div>
+            <div class="col-sm">
+                <h3>From currency</h3>
+                <select id="money_type_in">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+            <div class="col-sm">
+                <h3>To currency</h3>
+                <select id="money_type_out">
+                    <option value="VND">VND</option>
+                    <option value="USD">USD</option>
+                </select>
+            </div>
+            <div class="col-sm">
+                <button type="button" class="btn btn-warning" onclick="moneyConvert()">Convert</button>
+            </div>
+        </div>
+    </div>
+    <h1 id="final_result"></h1>
+    <script>
+        function moneyConvert() {
+            let user_in = document.getElementById("money_in").value
+            console.log(user_in)
+            let select_1 = document.getElementById("money_type_in").value
+            let select_2 = document.getElementById("money_type_out").value
+            if (select_1 == select_2) {
+                document.getElementById("final_result").innerText = user_in   + " VND/$"
+            }
+            if (select_1 == "VND" && select_2 == "USD") {
+                document.getElementById("final_result").innerText = user_in * 24000 + " VND"
+            }
+            if (select_1 == "USD" && select_2 == "VND") {
+                document.getElementById("final_result").innerText = user_in / 24000 + " $"
+            }
+        }
+    </script>
+</body>
+
+</html>
