@@ -9,54 +9,39 @@
 </head>
 
 <body>
-    <p>Toan</p>
-    <input type="text" id="math" placeholder="nhap diem mon toan">
-    <br>
-    <p>Van</p>
-    <input type="text" id="literature" placeholder="nhap diem mon van">
-    <br>
-    <p>Anh</p>
-    <input type="text" id="eng" placeholder="nhap diem mon anh">
-    <br>
-    <h1>Khu vuc</h1>
-    <select id="area" >
-        <option value="kv1">kv1</option>
-        <option value="kv2">kv2</option>
-        <option value="kv2-nt">kv2-nt</option>
-        <option value="kv3">kv3</option>
-    </select>
-    <br>
-    <h1 id="finalResult"></h1>
-    <button type="submit" onclick="submit_result()">Kiem tra</button>
+    <h1>Tính số ngày trong một tháng</h1>
+    <input type="text" placeholder="Tháng mà bạn chọn" id="user_date">
+    <button onclick="calDate()">Tính số ngày</button>
+    <h1 id="results"></h1>
     <script>
-        function submit_result() {
-            let selectedValue = document.getElementById("area").value
-            var kv 
-            switch (selectedValue) {
-                case "kv1":
-                    kv = 0.75
+        function calDate() {
+            let date = document.getElementById("user_date").value
+            console.log(date)
+            let result
+            switch (date) {
+                case "1":
+                case "3":
+                case "5":
+                case "7":
+                case "8":
+                case "10":
+                case "12":
+                    result = "co 31 ngay"
                     break;
-                case "kv2":
-                    kv = 0.25
+                case "2":
+                case "4":
+                case "6":
+                case "9":
+                case "11":
+                result = "co 30 ngay"
                     break;
-                case "kv2-nt":
-                    kv = 0.5
-                    break;
-                case "kv3":
-                    kv = 0
+                default:
+                    result = " vui long nhap dung thang"
                     break;
             }
-            //
-            let Math = document.getElementById("math").value
-            let Literature = document.getElementById("literature").value
-            let Eng = document.getElementById("eng").value
-            let math = parseInt(Math)
-            let literature = parseInt(Literature)
-            let eng = parseInt(Eng)
-            let result = math + literature + eng + kv
             console.log(result)
-            document.getElementById("finalResult").innerText = "Điểm của bạn là: " + result
         }
+
     </script>
 </body>
 
